@@ -1,0 +1,17 @@
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Auth.DataLayer.deps.json
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Auth.DataLayer.runtimeconfig.json
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Auth.DataLayer.dll
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\ref\Auth.DataLayer.dll
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Auth.DataLayer.pdb
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.AssemblyInfoInputs.cache
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.AssemblyInfo.cs
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.csproj.CoreCompileInputs.cache
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.dll
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\ref\Auth.DataLayer.dll
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.pdb
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.genruntimeconfig.cache
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.csproj.AssemblyReference.cache
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Common.dll
+D:\Projects\Tech\Auth.DataLayer\bin\Debug\net6.0\Common.pdb
+D:\Projects\Tech\Auth.DataLayer\obj\Debug\net6.0\Auth.DataLayer.csproj.CopyComplete
