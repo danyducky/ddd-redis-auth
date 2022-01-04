@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Danyducky.Tech.Infrastructure</PackageId>
+        <Authors>Danyducky</Authors>
+        <Description>Infrastructure layer for tech project, contains ddd core and other features</Description>
+        <PackageVersion>1.2.2</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Core" />
+        <Folder Include="EventBus" />
+        <Folder Include="Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+        <PackageReference Include="Scrutor" Version="3.3.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+</Project>
