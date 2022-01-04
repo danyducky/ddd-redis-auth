@@ -1936,6 +1936,7 @@
         "dependencies": {
           "Auth.Domain": "1.0.0",
           "Common": "1.0.0",
+          "Core": "1.0.0",
           "EFCore.NamingConventions": "6.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.1"
@@ -1956,6 +1957,7 @@
         "dependencies": {
           "Auth.Domain": "1.0.0",
           "Common": "1.0.0",
+          "Core": "1.0.0",
           "Microsoft.Extensions.Configuration": "6.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.10.0"
         },
@@ -6575,8 +6577,8 @@
     },
     "Core/1.0.0": {
       "type": "project",
-      "path": "../Auth.Domain.Core/Core.csproj",
-      "msbuildProject": "../Auth.Domain.Core/Core.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     },
     "Startup/1.0.0": {
       "type": "project",
@@ -6590,6 +6592,7 @@
       "Auth.Infrastructure >= 1.0.0",
       "Auth.Infrastructure.Identity >= 1.0.0",
       "Common >= 1.0.0",
+      "Core >= 1.0.0",
       "Startup >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -6640,6 +6643,9 @@
             },
             "D:\\Projects\\Tech\\Common\\Common.csproj": {
               "projectPath": "D:\\Projects\\Tech\\Common\\Common.csproj"
+            },
+            "D:\\Projects\\Tech\\Core\\Core.csproj": {
+              "projectPath": "D:\\Projects\\Tech\\Core\\Core.csproj"
             },
             "D:\\Projects\\Tech\\Startup\\Startup.csproj": {
               "projectPath": "D:\\Projects\\Tech\\Startup\\Startup.csproj"

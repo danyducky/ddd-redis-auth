@@ -916,14 +916,15 @@
     },
     "Core/1.0.0": {
       "type": "project",
-      "path": "../Auth.Domain.Core/Core.csproj",
-      "msbuildProject": "../Auth.Domain.Core/Core.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Auth.Domain >= 1.0.0",
       "Common >= 1.0.0",
+      "Core >= 1.0.0",
       "EFCore.NamingConventions >= 6.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.1",
@@ -967,6 +968,9 @@
             },
             "D:\\Projects\\Tech\\Common\\Common.csproj": {
               "projectPath": "D:\\Projects\\Tech\\Common\\Common.csproj"
+            },
+            "D:\\Projects\\Tech\\Core\\Core.csproj": {
+              "projectPath": "D:\\Projects\\Tech\\Core\\Core.csproj"
             }
           }
         }

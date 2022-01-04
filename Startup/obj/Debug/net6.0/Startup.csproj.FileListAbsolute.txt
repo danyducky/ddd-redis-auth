@@ -13,5 +13,3 @@ D:\Projects\Tech\Startup\obj\Debug\net6.0\Startup.csproj.AssemblyReference.cache
 D:\Projects\Tech\Startup\bin\Debug\net6.0\Common.dll
 D:\Projects\Tech\Startup\bin\Debug\net6.0\Common.pdb
 D:\Projects\Tech\Startup\obj\Debug\net6.0\Startup.csproj.CopyComplete
-D:\Projects\Tech\Startup\bin\Debug\net6.0\Core.dll
-D:\Projects\Tech\Startup\bin\Debug\net6.0\Core.pdb

@@ -126,16 +126,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
-      "Core/1.0.0": {
-        "dependencies": {
-          "FluentValidation.AspNetCore": "10.3.6",
-          "Microsoft.EntityFrameworkCore": "6.0.1"
-        },
-        "runtime": {
-          "Core.dll": {}
-        }
-      }
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
     }
   },
   "libraries": {
@@ -262,11 +253,6 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
-    },
-    "Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

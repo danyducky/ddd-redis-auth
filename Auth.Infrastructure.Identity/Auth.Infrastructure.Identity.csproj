@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Auth.Domain\Auth.Domain.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
 </Project>

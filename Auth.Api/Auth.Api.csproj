@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Auth.Infrastructure.Identity\Auth.Infrastructure.Identity.csproj" />
     <ProjectReference Include="..\Auth.Infrastructure\Auth.Infrastructure.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\Startup\Startup.csproj" />
   </ItemGroup>
 

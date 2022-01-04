@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Auth.Domain.Core\Core.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

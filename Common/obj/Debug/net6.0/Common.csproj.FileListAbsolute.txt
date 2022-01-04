@@ -9,7 +9,4 @@ D:\Projects\Tech\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
 D:\Projects\Tech\Common\obj\Debug\net6.0\Common.dll
 D:\Projects\Tech\Common\obj\Debug\net6.0\ref\Common.dll
 D:\Projects\Tech\Common\obj\Debug\net6.0\Common.pdb
-D:\Projects\Tech\Common\bin\Debug\net6.0\Core.dll
-D:\Projects\Tech\Common\bin\Debug\net6.0\Core.pdb
 D:\Projects\Tech\Common\obj\Debug\net6.0\Common.csproj.AssemblyReference.cache
-D:\Projects\Tech\Common\obj\Debug\net6.0\Common.csproj.CopyComplete

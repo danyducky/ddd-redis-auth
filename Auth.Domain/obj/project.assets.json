@@ -631,8 +631,8 @@
     },
     "Core/1.0.0": {
       "type": "project",
-      "path": "../Auth.Domain.Core/Core.csproj",
-      "msbuildProject": "../Auth.Domain.Core/Core.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -675,6 +675,9 @@
           "projectReferences": {
             "D:\\Projects\\Tech\\Auth.Domain.Core\\Core.csproj": {
               "projectPath": "D:\\Projects\\Tech\\Auth.Domain.Core\\Core.csproj"
+            },
+            "D:\\Projects\\Tech\\Core\\Core.csproj": {
+              "projectPath": "D:\\Projects\\Tech\\Core\\Core.csproj"
             }
           }
         }

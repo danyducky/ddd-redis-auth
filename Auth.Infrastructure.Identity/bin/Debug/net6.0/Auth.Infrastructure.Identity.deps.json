@@ -10,6 +10,7 @@
         "dependencies": {
           "Auth.Domain": "1.0.0",
           "Common": "1.0.0",
+          "Core": "1.0.0",
           "Microsoft.Extensions.Configuration": "6.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.10.0"
         },
