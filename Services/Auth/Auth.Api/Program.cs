@@ -1,12 +1,20 @@
 using Auth.Infrastructure;
 using Auth.Infrastructure.Identity.Services;
+using Infrastructure.Startup.Entities;
 
 Infrastructure.Startup.Program.Run(
-(provider) =>
+(provider, configuration) =>
 {
     provider.DbContextType = typeof(AuthContext);
-    provider.RedisConnection = "localhost:6379";
+    provider.RedisConnection = configuration.GetConnectionString("RedisConnection");
     provider.RabbitMqConnection = "localhost";
+    
+    provider.JwtBearerProvider = new JwtBearerProvider
+    {
+        Audience = configuration["Jwt:Audience"],
+        Issuer = configuration["Jwt:Issuer"],
+        Key = configuration["Jwt:Key"]
+    };
 },
 (services) =>
 {

@@ -28,7 +28,7 @@ namespace Auth.Infrastructure.Identity.Services
         {
             var claims = new List<Claim>
             {
-                new(JwtRegisteredClaimNames.Sub, user.Email),
+                new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new(JwtRegisteredClaimNames.Name, user.Email),
                 new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new(JwtRegisteredClaimNames.Iss, Issuer),
@@ -44,7 +44,7 @@ namespace Auth.Infrastructure.Identity.Services
             var accessToken = BuildAccessToken(claims);
             var refreshToken = BuildRefreshToken();
 
-            return new TokenPack(accessToken, refreshToken);
+            return new TokenPack(accessToken, RefreshTokenPayload.Instance(refreshToken, user.Id));
         }
 
         private string BuildAccessToken(IEnumerable<Claim> claims)

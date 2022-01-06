@@ -20,6 +20,11 @@ namespace Auth.Infrastructure.Repositories
             _context.Users.Add(user);
         }
 
+        public User? Find(Guid id)
+        {
+            return _context.Users.Find(id);
+        }
+
         public IQueryable<User> GetBy(string email, string password)
         {
             return _context.Users.Where(x => x.Email == email && x.Password == password);

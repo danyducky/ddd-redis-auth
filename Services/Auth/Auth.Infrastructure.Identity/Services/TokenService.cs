@@ -1,6 +1,5 @@
-using Auth.Domain.Aggregates.UserAggregate;
+using Auth.Infrastructure.Identity.Entities;
 using Infrastructure.Services;
-using Microsoft.Extensions.Caching.Distributed;
 
 namespace Auth.Infrastructure.Identity.Services;
 
@@ -15,23 +14,21 @@ public class TokenService : ITokenService
         _redisCache = redisCache;
     }
 
-    public void SetRefreshToken(User user, string refreshToken)
+    public void Set(RefreshTokenPayload payload)
     {
-        var cacheOptions = new DistributedCacheEntryOptions
+        _redisCache.Set(payload.RefreshToken, payload, (options) =>
         {
-            AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(RefreshTokenExpirationDays)
-        };
-
-        _redisCache.Set(user.Id.ToString(), refreshToken, cacheOptions);
+            options.AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(RefreshTokenExpirationDays);
+        });
     }
 
-    public string? GetRefreshToken(User user)
+    public RefreshTokenPayload? Get(string refreshToken)
     {
-        return _redisCache.Get<string?>(user.Id.ToString());
+        return _redisCache.Get<RefreshTokenPayload>(refreshToken);
     }
 
-    public void ForgetRefreshToken(User user)
+    public void Forget(string refreshToken)
     {
-        _redisCache.Clear(user.Id.ToString());
+        _redisCache.Clear(refreshToken);
     }
 }

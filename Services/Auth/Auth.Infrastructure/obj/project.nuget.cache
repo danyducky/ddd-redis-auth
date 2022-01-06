@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IPLhFGlZDStFp3bqXcnjzcAAnQkRYScl0aSmhHi5qm84GzIdHra17pNwg1Zw40aA6zrvCy8tccixYNAFN0ahXw==",
+  "dgSpecHash": "mjYGsnbNF1RlaeOqwYwD5EjklK/jdAr51n7r5tpF3evmY1UrUWTbP97zuw/k9HobyeQHnktdA2qCnuF4Ja1Zjg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Tech\\Services\\Auth\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\morik\\.nuget\\packages\\danyducky.tech.infrastructure\\1.2.2\\danyducky.tech.infrastructure.1.2.2.nupkg.sha512",
+    "C:\\Users\\morik\\.nuget\\packages\\danyducky.tech.infrastructure\\1.3.4\\danyducky.tech.infrastructure.1.3.4.nupkg.sha512",
     "C:\\Users\\morik\\.nuget\\packages\\efcore.namingconventions\\6.0.0\\efcore.namingconventions.6.0.0.nupkg.sha512",
     "C:\\Users\\morik\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\morik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",

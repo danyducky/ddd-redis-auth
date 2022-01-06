@@ -36,7 +36,7 @@ namespace Auth.Api.Controllers
 
             if (!result.Success) return BadRequest(result.Errors);
 
-            Response.Cookies.Append("Refresh", result.Entity!.RefreshToken, new CookieOptions()
+            Response.Cookies.Append("Refresh", result.Entity!.Payload.RefreshToken, new CookieOptions()
             {
                 HttpOnly = true
             });

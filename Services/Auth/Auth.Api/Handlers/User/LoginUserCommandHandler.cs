@@ -34,7 +34,7 @@ namespace Auth.Api.Handlers.User
 
             var pack = _jwtFactory.BuildTokenPack(user!);
 
-            _tokenService.SetRefreshToken(user!, pack.RefreshToken);
+            _tokenService.Set(pack.Payload);
 
             return Result(pack);
         }

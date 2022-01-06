@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using Infrastructure.Startup.Entities;
 using Infrastructure.Startup.Extensions;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -20,7 +21,7 @@ public static class Program
     }
 
     public static void Run(
-        Action<ApplicationProvider> appProviderDelegate,
+        Action<ApplicationProvider, IConfiguration> appProviderDelegate,
         Action<IServiceCollection> servicesDelegate,
         Action<IServiceProvider> providerDelegate
     )
@@ -28,13 +29,14 @@ public static class Program
         var args = Environment.GetCommandLineArgs();
         var builder = WebApplication.CreateBuilder(args);
 
-        appProviderDelegate(Provider);
+        appProviderDelegate(Provider, builder.Configuration);
 
         if (string.IsNullOrEmpty(Provider.RedisConnection) || string.IsNullOrEmpty(Provider.RabbitMqConnection))
             throw new ArgumentException("Connection strings cannot be empty");
 
+        builder.Services.AddCors();
         builder.Services.AddControllers();
-        builder.Services.AddJwtBearerAuthentication(builder.Configuration);
+        builder.Services.AddJwtBearerAuthentication(Provider.JwtBearerProvider);
 
         builder.Services.AddFluentValidation(configuration =>
         {
@@ -42,14 +44,14 @@ public static class Program
         });
 
         builder.Services.AddDefaultServices();
-        builder.Services.AddContextWithRepositories(Provider.DbContextType);
+
+        builder.Services.AddContextWithRepositories(Provider.DbContextType, builder.Configuration);
+
         builder.Services.AddCommandHandlersFromAssembly(EntryAssembly);
 
         builder.Services.AddDistributedRedisCache(options => { options.Configuration = Provider.RedisConnection; });
 
         servicesDelegate(builder.Services);
-
-        builder.Services.AddCors();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -58,13 +60,22 @@ public static class Program
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
+        // app.UseHttpsRedirection();
+
+        app.UseCors(options =>
+        {
+            options
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials();
+        });
 
         app.UseAuthentication();
         app.UseAuthorization();

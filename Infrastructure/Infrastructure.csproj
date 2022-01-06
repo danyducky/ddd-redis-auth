@@ -7,7 +7,7 @@
         <PackageId>Danyducky.Tech.Infrastructure</PackageId>
         <Authors>Danyducky</Authors>
         <Description>Infrastructure layer for tech project, contains ddd core and other features</Description>
-        <PackageVersion>1.2.2</PackageVersion>
+        <PackageVersion>1.3.4</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,11 +18,13 @@
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="EFCore.NamingConventions" Version="6.0.0" />
         <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
         <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.1" />
         <PackageReference Include="Scrutor" Version="3.3.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>

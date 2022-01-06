@@ -21,12 +21,16 @@ public class RedisCache : IRedisCache
             : default;
     }
 
-    public void Set<T>(string key, T value, DistributedCacheEntryOptions? options = null)
+    public void Set<T>(string key, T value, Action<DistributedCacheEntryOptions> action)
     {
-        _cache.SetString(key, JsonSerializer.Serialize(value), options ?? new DistributedCacheEntryOptions()
+        var options = new DistributedCacheEntryOptions
         {
             AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1)
-        });
+        };
+
+        action(options);
+
+        _cache.SetString(key, JsonSerializer.Serialize(value), options);
     }
 
     public void Clear(string key)

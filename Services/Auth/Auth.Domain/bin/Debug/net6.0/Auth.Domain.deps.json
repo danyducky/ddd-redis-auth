@@ -8,20 +8,22 @@
     ".NETCoreApp,Version=v6.0": {
       "Auth.Domain/1.0.0": {
         "dependencies": {
-          "Danyducky.Tech.Infrastructure": "1.2.2",
+          "Danyducky.Tech.Infrastructure": "1.3.3",
           "Microsoft.EntityFrameworkCore": "6.0.1"
         },
         "runtime": {
           "Auth.Domain.dll": {}
         }
       },
-      "Danyducky.Tech.Infrastructure/1.2.2": {
+      "Danyducky.Tech.Infrastructure/1.3.3": {
         "dependencies": {
+          "EFCore.NamingConventions": "6.0.0",
           "FluentValidation.AspNetCore": "10.3.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.1",
           "Microsoft.Extensions.Caching.Redis": "2.2.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.1",
           "Scrutor": "3.3.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -29,6 +31,19 @@
           "lib/net6.0/Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EFCore.NamingConventions/6.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/EFCore.NamingConventions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
           }
         }
       },
@@ -305,6 +320,31 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Npgsql/6.0.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.dll": {
+            "assemblyVersion": "6.0.1.0",
+            "fileVersion": "6.0.1.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1",
+          "Npgsql": "6.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "6.0.1.0",
+            "fileVersion": "6.0.1.0"
+          }
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1119,12 +1159,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Danyducky.Tech.Infrastructure/1.2.2": {
+    "Danyducky.Tech.Infrastructure/1.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-d+BdqxD9IXk/HB+Mm5b4JH0elEeiMms4IdHsZD/lXRBG2C1KB5JXpMiWHl0KfDAFB27q49Cy91UJdZgRx/bekw==",
-      "path": "danyducky.tech.infrastructure/1.2.2",
-      "hashPath": "danyducky.tech.infrastructure.1.2.2.nupkg.sha512"
+      "sha512": "sha512-OswJCNe81twprYfzaIxvGeOFYHKEdnMMdIwUAJmdrBbkPV0IBDG+mYWtXXItpPaHCg6SZfp64zj8F8O9QYF+nA==",
+      "path": "danyducky.tech.infrastructure/1.3.3",
+      "hashPath": "danyducky.tech.infrastructure.1.3.3.nupkg.sha512"
+    },
+    "EFCore.NamingConventions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ij0Z59hA3hattuY+FFmfGhJwLmSw8uz/+01lMRnD5YOYJM7hN7JJUZ92U3rZL6nTJQL5xOf7Rt39zdeNSloImw==",
+      "path": "efcore.namingconventions/6.0.0",
+      "hashPath": "efcore.namingconventions.6.0.0.nupkg.sha512"
     },
     "FluentValidation/10.3.6": {
       "type": "package",
@@ -1342,6 +1389,20 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "Npgsql/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T0v1fSBzcQaJoa6kHGiYYi/vwTJ5VYd8DDjCxW1jazAuO2Ak1KVWMkEcQxxz/C+H/+QteJRMi/xAVHzv1kKSgg==",
+      "path": "npgsql/6.0.1",
+      "hashPath": "npgsql.6.0.1.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RosOHLphFZ5wIuqPct0IvCH4BrHB61ksW5WpywnWgdesNWvXKjhN+LJRwyGoZt9R1t4NCZhxHRePKgTHr94PJw==",
+      "path": "npgsql.entityframeworkcore.postgresql/6.0.1",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

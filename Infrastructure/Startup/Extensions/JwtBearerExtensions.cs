@@ -1,6 +1,7 @@
 ﻿using System.Text;
+using Infrastructure.Core.Extensions;
+using Infrastructure.Startup.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
@@ -8,17 +9,19 @@ namespace Infrastructure.Startup.Extensions;
 
 internal static class JwtBearerExtensions
 {
-    internal static void AddJwtBearerAuthentication(this IServiceCollection services, IConfiguration configuration)
+    internal static void AddJwtBearerAuthentication(this IServiceCollection services, JwtBearerProvider provider)
     {
+        if (!provider.IsExists()) throw new ArgumentNullException("JwtBearerProvider", "Is null");
+
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            .AddJwtBearer(options => options.Configure(configuration));
+            .AddJwtBearer(options => options.Configure(provider));
     }
 
-    private static void Configure(this JwtBearerOptions options, IConfiguration configuration)
+    private static void Configure(this JwtBearerOptions options, JwtBearerProvider provider)
     {
         options.SaveToken = true;
         options.TokenValidationParameters = new TokenValidationParameters()
@@ -27,9 +30,9 @@ internal static class JwtBearerExtensions
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = configuration["Jwt:Issuer"],
-            ValidAudience = configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"])),
+            ValidIssuer = provider.Issuer,
+            ValidAudience = provider.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(provider.Key)),
             ClockSkew = TimeSpan.Zero
         };
     }

@@ -14,12 +14,6 @@ namespace Auth.Infrastructure
         {
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=tech_auth;Username=postgres;Password=1")
-                .UseSnakeCaseNamingConvention();
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CredentialEntityTypeConfiguration());

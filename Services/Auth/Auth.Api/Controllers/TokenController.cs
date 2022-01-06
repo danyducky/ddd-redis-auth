@@ -31,13 +31,13 @@ namespace Auth.Api.Controllers
             };
             var result = validator.Validate(command);
 
-            if (!result.IsValid) return BadRequest(result.Errors);
+            if (!result.IsValid) return Unauthorized();
 
             var handleResult = _refreshTokenCommandHandler.Handle(command);
 
-            if (!handleResult.Success) return BadRequest(result.Errors);
+            if (!handleResult.Success) return Unauthorized();
 
-            Response.Cookies.Append("Refresh", handleResult.Entity!.RefreshToken, new CookieOptions
+            Response.Cookies.Append("Refresh", handleResult.Entity!.Payload.RefreshToken, new CookieOptions
             {
                 HttpOnly = true
             });
@@ -54,11 +54,11 @@ namespace Auth.Api.Controllers
             };
             var result = validator.Validate(command);
 
-            if (!result.IsValid) return BadRequest(result.Errors);
+            if (!result.IsValid) return Unauthorized();
 
             var handleResult = _revokeTokenCommandHandler.Handle(command);
 
-            if (!handleResult.Success) return BadRequest(result.Errors);
+            if (!handleResult.Success) return Unauthorized();
 
             Response.Cookies.Delete("Refresh");
 

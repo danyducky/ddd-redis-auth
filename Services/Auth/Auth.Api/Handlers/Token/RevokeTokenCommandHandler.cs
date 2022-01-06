@@ -17,9 +17,7 @@ public class RevokeTokenCommandHandler : CommandHandlerBase, ICommandHandler<Rev
 
     public Result Handle(RevokeTokenCommand command)
     {
-        var user = new Domain.Aggregates.UserAggregate.User("", DateTime.Now);
-
-        _tokenService.ForgetRefreshToken(user);
+        _tokenService.Forget(command.RefreshToken);
 
         return Result();
     }

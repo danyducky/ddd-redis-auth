@@ -25,6 +25,11 @@ public class UserManager : IUserManager
             .FirstOrDefault();
     }
 
+    public User? FindById(Guid id)
+    {
+        return _userRepository.Find(id);
+    }
+
     public bool ValidatePassword(User user, string password)
     {
         return _hashService.Validate(password, user.Password);

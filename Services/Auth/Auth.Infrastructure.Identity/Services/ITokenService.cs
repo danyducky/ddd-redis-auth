@@ -1,10 +1,10 @@
-using Auth.Domain.Aggregates.UserAggregate;
+using Auth.Infrastructure.Identity.Entities;
 
 namespace Auth.Infrastructure.Identity.Services;
 
 public interface ITokenService
 {
-    void SetRefreshToken(User user, string refreshToken);
-    string? GetRefreshToken(User user);
-    void ForgetRefreshToken(User user);
+    void Set(RefreshTokenPayload payload);
+    RefreshTokenPayload? Get(string refreshToken);
+    void Forget(string refreshToken);
 }

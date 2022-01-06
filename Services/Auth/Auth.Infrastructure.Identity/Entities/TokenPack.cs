@@ -2,12 +2,12 @@ namespace Auth.Infrastructure.Identity.Entities;
 
 public class TokenPack
 {
-    public TokenPack(string accessToken, string refreshToken)
+    public TokenPack(string accessToken, RefreshTokenPayload payload)
     {
         AccessToken = accessToken;
-        RefreshToken = refreshToken;
+        Payload = payload;
     }
 
     public string AccessToken { get; }
-    public string RefreshToken { get; }
+    public RefreshTokenPayload Payload { get; }
 }
