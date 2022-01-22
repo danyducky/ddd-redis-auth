@@ -1948,10 +1948,7 @@
         },
         "runtime": {
           "bin/placeholder/Auth.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Auth.Infrastructure/1.0.0": {
         "type": "project",
@@ -1965,10 +1962,7 @@
         },
         "runtime": {
           "bin/placeholder/Auth.Infrastructure.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Auth.Infrastructure.Identity/1.0.0": {
         "type": "project",
@@ -1984,10 +1978,7 @@
         },
         "runtime": {
           "bin/placeholder/Auth.Infrastructure.Identity.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
